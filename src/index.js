@@ -1,4 +1,16 @@
 import app from "./app";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+mongoose.connect(
+  process.env.MONGO_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("connected to database successfuly");
+  }
+);
 
 const port = process.env.PORT || 3000;
 
