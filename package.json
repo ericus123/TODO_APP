@@ -1,0 +1,24 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "todo app",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && nodemon  ./dist/index.js",
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AMANI Eric",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  }
+}
