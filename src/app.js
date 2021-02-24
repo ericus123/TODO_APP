@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from "../swagger.json";
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/api/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 import authRoute from "./routes/auth/index";
 import todoRoute from "./routes/todos/index";
