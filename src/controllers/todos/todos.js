@@ -49,7 +49,6 @@ class TodosController {
         .status(201)
         .json({ msg: "Todo created successfuly", todo: todo });
     } catch (error) {
-      console.log(error);
       return res
         .status(500)
         .json({ error: "Something went wrong", err: error });
@@ -58,6 +57,7 @@ class TodosController {
   static async updateTodo(req, res) {
     try {
       const { id } = req.params;
+          
       const todo = await Todo.findOne({ _id: id, user: req.user.id });
       if (!todo) {
         return res.status(404).json({ error: "Todo not found" });
@@ -77,6 +77,7 @@ class TodosController {
   static async deleteTodo(req, res) {
     try {
       const { id } = req.params;
+       
       const todo = await Todo.findOne({ _id: id, user: req.user.id });
       if (!todo) {
         return res.status(404).json({ error: "Todo not found" });
