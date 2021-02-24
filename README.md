@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/ericus123/TODO_APP/badge.svg?branch=test-testing-the-app)](https://coveralls.io/github/ericus123/TODO_APP?branch=test-testing-the-app)[![Build Status](https://www.travis-ci.com/ericus123/TODO_APP.svg?branch=develop)](https://www.travis-ci.com/ericus123/TODO_APP)
+[![Coverage Status](https://coveralls.io/repos/github/ericus123/TODO_APP/badge.svg?branch=test-testing-the-app)](https://coveralls.io/github/ericus123/TODO_APP?branch=test-testing-the-app) [![Build Status](https://www.travis-ci.com/ericus123/TODO_APP.svg?branch=develop)](https://www.travis-ci.com/ericus123/TODO_APP)
 
 # TODO APP
 
