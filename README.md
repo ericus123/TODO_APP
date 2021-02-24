@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/ericus123/TODO_APP/badge.svg?branch=test-testing-the-app)](https://coveralls.io/github/ericus123/TODO_APP?branch=test-testing-the-app) [![Build Status](https://www.travis-ci.com/ericus123/TODO_APP.svg?branch=develop)](https://www.travis-ci.com/ericus123/TODO_APP)
+[![Coverage Status](https://coveralls.io/repos/github/ericus123/TODO_APP/badge.svg)](https://coveralls.io/github/ericus123/TODO_APP) [![Build Status](https://www.travis-ci.com/ericus123/TODO_APP.svg?branch=develop)](https://www.travis-ci.com/ericus123/TODO_APP) ![GitHub](https://img.shields.io/github/license/ericus123/TODO_APP)
 
 # TODO APP
 
@@ -7,7 +7,7 @@ An app that helps in creation of things todo to oraganise your daily activities
 ## Documentation
 
 This app's API documentation is done using [swagger](https://swagger.io/)
-Documentation can be found here []()
+Documentation can be found [here](https://amani-todo.herokuapp.com/api/api-docs)
 
 ## Technologies Used
 
@@ -51,10 +51,10 @@ Documentation can be found here []()
 
 ### Heroku
 
-    The app is hosted on heroku with two environments(staging & production)
+The app is hosted on heroku with two environments(staging & production)
 
-    - Staging: [here]()
-    - Production: [here]()
+- Staging [here](https://amani-todo-staging.herokuapp.com/)
+- Production [here](https://amani-todo.herokuapp.com/)
 
 ## Scripts
 
@@ -63,4 +63,77 @@ Documentation can be found here []()
 - start: `npm run start` this is for starting the app in production mode
 - build: `npm run build` this is for building the application for production
 
+## Endpoints
+
+### Authentication
+
+- Signup `api/auth/signup` method `POST`
+- Login `api/auth/login` method `POST`
+
+### Todos (CRUD)
+
+- Get todos `api/todos` method `GET`
+- Get a todo `api/todos/:id` method `GET`
+- Create a todo `api/todos` method `POST`
+
+#### Request body schema
+
+```json
+{
+  "title": "title",
+  "description": "description of your todo",
+  "priority": "priority of your todo"
+}
+```
+
+> `required:true`
+
+- Update a todo `api/todos/:id` method `PATCH`
+
+  #### Request body schema
+
+```json
+{
+  "title": "title",
+  "description": "description of your todo",
+  "priority": "priority of your todo"
+}
+```
+
+> `required:false`
+
+- Delete todos `api/todos` method `DELETE`
+- Delete a todo `api/todos/:id` method `DELETE`
+
 ## How should this app be tested or used ?
+
+Before jumping to the codes, make sure you have a mongo account with two databases.One for production/development and another for testing
+
+- Add environment variables as shown in .env-example
+- Clone this repo `git clone https://github.com/ericus123/TODO_APP`
+- Change directory `cd TODO_APP` and open it in your text editor
+- Install all dependencies `npm install`
+
+  #### For development
+
+  - Start dev server `npm run dev`
+  - Navigate to your server url (localhost:port)
+  - check all endpoints
+
+  #### For production
+
+  - Build the production `npm run build`
+  - Start production server `npm run start`
+  - Navigate to your server url (localhost:port)
+  - check all endpoints
+
+  #### For testing
+
+  - Run `npm run test` and check tests
+
+  #### Testing hosted version
+
+  Visit the deployed url and check all endpoints using an API testing tool. > Ex: Postman
+
+  - Staging url [here](https://amani-todo-staging.herokuapp.com/)
+  - Production url [here](https://amani-todo-staging.herokuapp.com/)
